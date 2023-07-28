@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: 'Nanum Gothic', sans-serif;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+img {
+	border: currentColor; border-image: none;
+}
+
+a {
+	color: #000; text-decoration: none;
+}
+
+ul, li {
+	list-style: none;
+}
+
+.clear {
+	clear: both;
+}

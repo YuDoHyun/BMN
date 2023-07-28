@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.customer">
+<!-- 리절트 맵 정의 -->	
+	<resultMap id="noticeResult" type="noticeVO">
+		<result property="notice_id" column="notice_id" />
+		<result property="notice_title" column="notice_title" />
+		<result property="notice_content" column="notice_content" />
+		<result property="notice_date" column="notice_date" />
+		<result property="startRowNum" column="startRowNum" />
+		<result property="endRowNum" column="endRowNum" />
+	</resultMap>	
+   
+   <select id="NoticeList" parameterType="noticeVO" resultMap="noticeResult"   >
+        <![CDATA[
+         SELECT * FROM (
+			SELECT temp_table.*, ROWNUM as rnum FROM (
+			select * from T_SHOPPING_NOTICE order by notice_id desc
+			) temp_table )  WHERE RNUM BETWEEN #{startRowNum} AND #{endRowNum}
+	    ]]>
+	</select>
+	
+	<select id="selectNoticeDetail" resultMap="noticeResult"   parameterType="String"  >
+	    <![CDATA[
+		     select * from t_shopping_notice
+	        where notice_id=#{notice_id}
+    	]]>
+	</select>
+	
+	
+	<select id="KeywordSearch" resultType="String"   parameterType="String"  >
+	    <![CDATA[
+        select * from t_shopping_notice 
+        where         
+        notice_title like '%'||#{keyword}||'%' OR
+        notice_content like '%'||#{keyword}||'%'
+        order by notice_id desc
+		]]>
+	</select>
+	
+
+</mapper>

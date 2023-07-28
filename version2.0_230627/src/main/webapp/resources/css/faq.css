@@ -1,0 +1,141 @@
+#page-nav-wrap{
+    width: 100%;
+    border-bottom: 1px solid #6d6d6d;
+}
+#page-nav{
+    margin: 0 auto;
+    width: 1080px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    color: #6d6d6d;  
+}
+.customerwrap {
+    width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.titlediv {
+    margin: 40px 0;
+}
+.customer-title {
+    font-size: 24px;
+    color: #292929;
+    font-weight: bold;
+}
+
+#customer-session-menu ul {
+	margin: 0 auto;
+    padding: 0 10px;
+    list-style: none;
+    text-align: center;
+    font-size: 0;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+#customer-session-menu ul li a{
+	background-color: #477A7B;
+    color: #fff;
+    position: relative;
+    display: block;
+    margin: 0 5px;
+    padding: 0 20px;
+    height: 35px;
+    line-height: 35px;
+    font-family: 'HGGGothicssi','Helvetica','Arial','Apple SD Gothic Neo','맑은 고딕','Malgun Gothic','돋움','Dotum',sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    list-style: none;
+    border-radius: 50px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+#customer-session-menu ul li a:hover {
+	background-color: #fff;
+	color: #477A7B
+}
+#faq {
+	margin: 30px 0;
+}
+
+.customer-table {
+    width: 1080px;
+    border-spacing: 0px;
+    border-collapse: separate;
+    font-size: 16px;
+    color: #505050;
+    margin-bottom: 30px;
+    font-family: 'SpoqaHanSans','Helvetica','Arial','애플SD 고딕네오','Apple SD Gothic Neo','맑은 고딕','Malgun Gothic','돋움','Dotum',sans-serif;
+}
+.table-head {
+    height: 35px;
+    font-size: 14px;
+    color: #477a7b;
+}
+.table-td1 {
+    width: 240px;
+}
+.table-td2 {
+    width: 600px;
+}
+.table-td3 {
+    width: 240px;
+}
+.table-td1, .table-td2, .table-td3 {
+    text-align: center;
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+}
+.table-tr {
+    height: 35px;
+    cursor: pointer;
+}
+.td1, .td3 {
+    text-align: center;
+}
+.td1, .td2, .td3 {
+    border-bottom: 1px solid #ebebeb;
+}
+.customer-search {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+.searchbar {
+    width: 200px;
+    height: 30px;
+    font-size: 16px;
+    color: #292929;
+}
+.searchbutton {
+    width: 60px;
+    height: 30px;
+    background-color: #292929;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    margin-left: 5px;
+    margin-bottom: 50px;
+    margin-right: 278px;
+    cursor: pointer;
+}
+.onetoone {
+    width: 120px;
+    height: 30px;
+    margin-top: 3px;
+    border: 1px solid #292929;
+    border-radius: 5px;
+    background-color: white;
+    color: #292929;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.onetoone:hover {
+	background-color: #fee469;
+	border: none;
+}

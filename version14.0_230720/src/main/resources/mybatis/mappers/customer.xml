@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.customer">
+<!-- 리절트 맵 정의 -->	
+	<resultMap id="noticeResult" type="noticeVO">
+		<result property="notice_id" column="notice_id" />
+		<result property="notice_title" column="notice_title" />
+		<result property="notice_content" column="notice_content" />
+		<result property="notice_date" column="notice_date" />
+		<result property="startRowNum" column="startRowNum" />
+		<result property="endRowNum" column="endRowNum" />
+	</resultMap>	
+	
+	<resultMap id="faqResult" type="faqVO">
+		<result property="faq_id" column="faq_id" />
+		<result property="faq_title" column="faq_title" />
+		<result property="faq_content" column="faq_content" />
+		<result property="faq_date" column="faq_date" />
+		<result property="startRowNum" column="startRowNum" />
+		<result property="endRowNum" column="endRowNum" />
+	</resultMap>
+	
+	<resultMap id="qnaResult" type="qnaVO">
+		<result property="qna_id" column="qna_id" />
+		<result property="goods_id" column="goods_id" />
+		<result property="member_id" column="member_id" />
+		<result property="qna_title" column="qna_title" />
+		<result property="qna_content" column="qna_content" />
+		<result property="qna_comment" column="qna_comment" />
+		<result property="qna_date" column="qna_date" />
+		<result property="startRowNum" column="startRowNum" />
+		<result property="endRowNum" column="endRowNum" />
+		<result property="fileName" column="fileName" />
+		<result property="member_name" column="member_name" />
+	</resultMap>
+	
+	<resultMap id="reviewResult" type="reviewVO">
+		<result property="review_id" column="review_id" />
+		<result property="goods_id" column="goods_id" />
+		<result property="order_id" column="order_id" />
+		<result property="member_id" column="member_id" />
+		<result property="review_content" column="review_content" />
+		<result property="review_comment" column="review_comment" />
+		<result property="review_date" column="review_date" />
+		<result property="review_star" column="review_star" />
+		<result property="startRowNum" column="startRowNum" />
+		<result property="endRowNum" column="endRowNum" />
+		<result property="fileName" column="fileName" />
+		<result property="member_name" column="member_name" />
+	</resultMap>
+   
+   <resultMap id="imageResult" type="imageFileVO">
+	   <result property="goods_id" column="goods_id" />
+	   <result property="fileName" column="fileName" />
+	   <result property="reg_id" column="reg_id" />
+	   <result property="image_id" column="image_id" />
+	   <result property="fileType" column="fileType" />
+	</resultMap>
+	
+	
+   <!-- 공지사항 -->
+   <select id="NoticeList" parameterType="noticeVO" resultMap="noticeResult"   >
+        <![CDATA[
+         SELECT * FROM (
+			SELECT temp_table.*, ROWNUM as rnum FROM (
+			select * from T_SHOPPING_NOTICE order by notice_id desc
+			) temp_table )  WHERE RNUM BETWEEN #{startRowNum} AND #{endRowNum}
+	    ]]>
+	</select>
+	
+	<select id="selectNoticeDetail" resultMap="noticeResult"   parameterType="String"  >
+	    <![CDATA[
+		     select * from t_shopping_notice
+	        where notice_id=#{notice_id}
+    	]]>
+	</select>
+	
+	<select id="NoticeKeywordSearch" resultType="String"   parameterType="String"  >
+	    <![CDATA[
+        select * from t_shopping_notice 
+        where         
+        notice_title like '%'||#{keyword}||'%' OR
+        notice_content like '%'||#{keyword}||'%'
+        order by notice_id desc
+		]]>
+	</select>
+	
+
+	<!-- FAQ -->
+	<select id="FaqList" parameterType="faqVO" resultMap="faqResult"   >
+        <![CDATA[
+         SELECT * FROM (
+			SELECT temp_table.*, ROWNUM as rnum FROM (
+			select * from T_SHOPPING_FAQ order by faq_id desc
+			) temp_table )  WHERE RNUM BETWEEN #{startRowNum} AND #{endRowNum}
+	    ]]>
+	</select>
+	
+	<select id="selectFaqDetail" resultMap="faqResult"   parameterType="String"  >
+	    <![CDATA[
+		     select * from t_shopping_faq
+	        where faq_id=#{faq_id}
+    	]]>
+	</select>
+	
+	<select id="FaqKeywordSearch" resultMap="faqResult"   parameterType="String"  >
+	    <![CDATA[
+        SELECT *
+		    FROM (
+		      SELECT temp_table.*, ROWNUM as rnum
+		      FROM (
+		        SELECT *
+		        FROM t_shopping_faq
+		        WHERE faq_title LIKE '%'||#{keyword}||'%' OR faq_content LIKE '%'||#{keyword}||'%'
+		        ORDER BY faq_id DESC
+		      ) temp_table
+		    )
+		    WHERE RNUM BETWEEN #{startRowNum} AND #{endRowNum}
+		]]>
+	</select>
+	
+	<!-- QNA -->
+	<select id="QnaList" parameterType="qnaVO" resultMap="qnaResult"   >
+        <![CDATA[
+         SELECT * FROM (
+		    SELECT temp_table.*, ROWNUM AS rnum FROM (
+		        SELECT Q.QNA_ID, I.FILENAME, Q.QNA_TITLE, M.MEMBER_NAME, Q.QNA_DATE, G.GOODS_ID
+		        FROM T_SHOPPING_QNA Q
+		        JOIN T_SHOPPING_MEMBER M ON Q.MEMBER_ID = M.MEMBER_ID
+		        LEFT JOIN T_SHOPPING_GOODS G ON Q.GOODS_ID = G.GOODS_ID
+		        LEFT JOIN T_GOODS_DETAIL_IMAGE I ON G.GOODS_ID = I.GOODS_ID AND I.FILETYPE = 'main_image'
+		        ORDER BY Q.QNA_ID DESC
+		    ) temp_table ) WHERE RNUM BETWEEN #{startRowNum} AND #{endRowNum}
+	    ]]>
+	</select>
+	
+	<select id="selectQnaDetail" resultMap="qnaResult"   parameterType="String"  >
+	    <![CDATA[
+	        SELECT Q.QNA_ID, Q.FILENAME, Q.MEMBER_ID, M.MEMBER_NAME, Q.QNA_TITLE,
+	        Q.QNA_CONTENT, Q.QNA_COMMENT, Q.QNA_STATUS, Q.QNA_DATE 
+	        FROM T_SHOPPING_QNA Q 
+	        JOIN T_SHOPPING_MEMBER M ON Q.MEMBER_ID = M.MEMBER_ID 
+	        WHERE Q.QNA_ID=#{qna_id}
+    	]]>
+	</select>
+	
+	<insert id="insertQna" parameterType="java.util.Map">
+	  <selectKey resultType="int" keyProperty="qna_id" order="BEFORE">
+	    select COALESCE(MAX(QNA_ID),0) + 1 from T_SHOPPING_QNA
+	  </selectKey>
+	  <![CDATA[
+	    insert into T_SHOPPING_QNA 
+	    (QNA_ID, GOODS_ID, FILENAME, MEMBER_ID, QNA_TITLE, QNA_CONTENT)
+	    values (#{qna_id}, #{goods_id, jdbcType=NUMERIC}, #{fileName},
+	     #{member_id}, #{qna_title}, #{qna_content})
+	  ]]>
+	</insert>
+	
+	<!-- REVIEW -->
+	<select id="ReviewList" parameterType="reviewVO" resultMap="reviewResult"   >
+        <![CDATA[
+         SELECT * FROM (
+		    SELECT temp_table.*, ROWNUM AS rnum FROM (
+		        SELECT R.REVIEW_ID, I.FILENAME, M.MEMBER_NAME, 
+		        R.REVIEW_DATE, G.GOODS_ID, R.REVIEW_STAR 
+		        FROM T_SHOPPING_REVIEW R
+		        JOIN T_SHOPPING_MEMBER M ON R.MEMBER_ID = M.MEMBER_ID
+		        LEFT JOIN T_SHOPPING_GOODS G ON R.GOODS_ID = G.GOODS_ID
+		        LEFT JOIN T_GOODS_DETAIL_IMAGE I ON G.GOODS_ID = I.GOODS_ID AND I.FILETYPE = 'main_image'
+		        ORDER BY R.REVIEW_ID DESC
+		    ) temp_table ) WHERE RNUM BETWEEN #{startRowNum} AND #{endRowNum}
+	    ]]>
+	</select>
+	
+	<select id="reviewWriteFile" parameterType="imageFileVO" resultMap="imageResult"   >
+        <![CDATA[
+         select * from t_goods_detail_image where goods_id = #{goods_id} and filetype = 'main_image'
+	    ]]>
+	</select>
+	
+	<select id="selectReviewDetail" resultMap="reviewResult"   parameterType="String"  >
+	    <![CDATA[
+	        SELECT R.REVIEW_ID, R.FILENAME, R.MEMBER_ID, M.MEMBER_NAME, R.ORDER_ID,
+	        R.REVIEW_CONTENT, R.REVIEW_COMMENT, R.REVIEW_STAR, R.REVIEW_DATE 
+	        FROM T_SHOPPING_REVIEW R
+	        JOIN T_SHOPPING_MEMBER M ON R.MEMBER_ID = M.MEMBER_ID 
+	        WHERE R.REVIEW_ID=#{review_id}
+    	]]>
+	</select>
+	
+	<insert id="insertReview" parameterType="java.util.Map">
+	  <selectKey resultType="int" keyProperty="review_id" order="BEFORE">
+	    select COALESCE(MAX(REVIEW_ID),0) + 1 from T_SHOPPING_REVIEW
+	  </selectKey>
+	  <![CDATA[
+	    insert into T_SHOPPING_REVIEW
+	    (REVIEW_ID, GOODS_ID, ORDER_ID, FILENAME, MEMBER_ID, REVIEW_CONTENT, REVIEW_STAR)
+	    values (#{review_id}, #{goods_id}, #{order_id}, #{fileName},
+	     #{member_id}, #{review_content}, #{rating, jdbcType=NUMERIC})
+	  ]]>
+	</insert>
+	
+</mapper>

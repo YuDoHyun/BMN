@@ -1,0 +1,179 @@
+#page-nav-wrap{
+    width: 100%;
+    border-bottom: 1px solid #6d6d6d;
+}
+#page-nav{
+    margin: 0 auto;
+    width: 1080px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    color: #6d6d6d;  
+}
+.qnawrap {
+    width: 620px;
+    margin: 0 auto;
+}
+.qna-top {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #151515;
+}
+.qnadiv {
+    width: 620px;
+    height: 620px;
+    border: 1px solid #505050;
+    border-radius: 5px;
+    margin-bottom: 40px;
+}
+.qna-head {
+    text-align: center;
+    background-color: #ebebeb;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-bottom: 20px;
+}
+.review-confirm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 35px;
+}
+.imgupload {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #505050;
+    border-radius: 5px;
+    line-height: 40px;
+    cursor: pointer;
+}
+.qna-confirm {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+.qna-confirm input[type="file"] {
+  position: absolute;
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 0;
+}
+.uploaddiv {
+	box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #292929;
+    border-radius: 5px;
+    width: 350px;
+    height: 30px;
+}
+.uploadlabel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    cursor: pointer;
+}
+#fileName {
+	box-sizing: border-box;
+    width: 350px;
+    height: 30px;
+    border: 1px solid #292929;
+    background-color: #ebebeb;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 10px;
+    margin-top: 5px;
+}
+.qna-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px auto;
+}
+.qna-title, .qna-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    color: #505050;
+}
+.qna-title{
+    margin-bottom: 15px;
+}
+.qna-title-span {
+    margin-bottom: 10px;
+    margin-right: 325px;
+}
+.qna-content-span {
+    margin-bottom: 10px;
+    margin-right: 295px;
+}
+.title {
+    width: 350px;
+    height: 30px;
+    border: 1px solid #505050;
+    border-radius: 5px;
+}
+.content {
+    width: 350px;
+    height: 110px;
+    border: 1px solid #505050;
+    border-radius: 5px;
+    resize: none;
+}
+.qna-provision {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    font-size: 14px;
+    color: #505050;
+    margin-top: 20px;
+    text-align: justify;
+}
+.provision2 {
+    margin-top: 5px;
+}
+.qna-submit {
+    width: 125px;
+    height: 30px;
+    border-radius: 5px;
+    margin-left: 15px;
+    background-color: white;
+    border: 1px solid #151515;
+    color: #151515;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.qna-submit:hover {
+    background-color: #fee469;
+    border: none;
+}
+.qna-cancel {
+    width: 125px;
+    height: 30px;
+    background-color: white;
+    border: 1px solid #151515;
+    color: #151515;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.qna-cancel:hover {
+    background-color: #fee469;
+    border: none;
+}

@@ -1,0 +1,83 @@
+.boardwrap {
+    margin-left: 20px;
+    margin-top: 170px;
+    width:800px;        
+    float:left;
+}
+.board-admin {
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 50px;
+}
+.board-wrap {
+    margin-top: 60px;
+    margin-left: 80px;
+}
+.board-table {
+    border-spacing: 0px;
+    border-collapse: separate;
+    width: 620px;
+    height: 400px;
+    margin-top: 10px;
+}
+.board-title {
+    height: 30px;
+}
+.board-td1 {
+    border-top: 1px solid #292929;
+    border-left: 1px solid #292929;
+    background-color: #ebebeb;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    width: 120px;
+}
+.board-td2 {
+    border-top: 1px solid #292929;
+    border-left: 1px solid #292929;
+    border-right: 1px solid #292929;
+    padding-top: 3px;
+    padding-left: 2px;
+}
+.board-content {
+    border-bottom: 1px solid #292929;
+}
+.board-text1 {
+    width: 490px;
+    height: 30px;
+    resize: none;
+    border: 1px solid #6d6d6d;
+    font-size: 16px;
+}
+.board-text2 {
+    width: 490px;
+    height: 360px;
+    resize: none;
+    font-size: 16px;
+}
+.buttondiv {
+    width: 620px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+.board-button {
+    width: 60px;
+    height: 30px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #292929;
+    color: #292929;
+    background-color: white;
+    transition: 0.2s;
+}
+.board-button:hover {
+    border: none;
+    background-color: #fee469;
+    color: #292929;
+}
+.btn1 {
+    margin-right: 10px;
+}

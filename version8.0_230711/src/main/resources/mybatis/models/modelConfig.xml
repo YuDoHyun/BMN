@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration 	PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+  <typeAliases>    
+    <typeAlias type="com.bob.goods.vo.GoodsVO" alias="goodsVO" />
+    <typeAlias type="com.bob.goods.vo.ImageFileVO" alias="imageFileVO" />
+    <typeAlias type="com.bob.member.vo.MemberVO" alias="memberVO" />
+    <typeAlias type="com.bob.cart.vo.CartVO" alias="cartVO" />
+    <typeAlias type="com.bob.order.vo.OrderVO" alias="orderVO" />
+    <typeAlias type="com.bob.mypage.vo.MyPageVO" alias="mypageVO" />
+    <typeAlias type="com.bob.customer.vo.NoticeVO" alias="noticeVO" />
+    <typeAlias type="com.bob.customer.vo.FaqVO" alias="faqVO" />
+    <typeAlias type="com.bob.customer.vo.QnaVO" alias="qnaVO" />
+  </typeAliases>
+</configuration>
+
+
+

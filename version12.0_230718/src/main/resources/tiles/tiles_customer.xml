@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+    
+    <!-- 공지사항 -->
+    <definition name="/customer/noticeMain" extends="baseLayout">
+       <put-attribute name="title" value="공지사항 메인 페이지" />
+       <put-attribute name="body" value="/WEB-INF/views/customer/noticeMain.jsp" />
+    </definition>
+    
+    <definition name="/customer/noticeDetail" extends="baseLayout">
+       <put-attribute name="title" value="공지사항 상세 페이지" />
+       <put-attribute name="body" value="/WEB-INF/views/customer/noticeDetail.jsp" />
+    </definition>    
+    
+    <!-- FAQ -->
+    <definition name="/customer/faqMain" extends="baseLayout">
+       <put-attribute name="title" value="FAQ 메인 페이지" />
+       <put-attribute name="body" value="/WEB-INF/views/customer/faqMain.jsp" />
+    </definition>
+    
+    <definition name="/customer/faqDetail" extends="baseLayout">
+       <put-attribute name="title" value="FAQ 상세 페이지" />
+       <put-attribute name="body" value="/WEB-INF/views/customer/faqDetail.jsp" />
+    </definition> 
+    
+    <!-- Q&A -->
+    <definition name="/customer/qnaMain" extends="baseLayout">
+       <put-attribute name="title" value="QnA 메인 페이지" />
+       <put-attribute name="body" value="/WEB-INF/views/customer/qnaMain.jsp" />
+    </definition>
+    
+    <definition name="/customer/qnaDetail" extends="baseLayout">
+       <put-attribute name="title" value="QnA 상세 페이지" />
+       <put-attribute name="body" value="/WEB-INF/views/customer/qnaDetail.jsp" />
+    </definition>
+    
+    <definition name="/customer/qnaWrite" extends="baseLayout">
+       <put-attribute name="title" value="QnA 입력 페이지" />
+       <put-attribute name="body" value="/WEB-INF/views/customer/qnaWrite.jsp" />
+    </definition>
+    
+    <!-- REVIEW -->
+    <definition name="/customer/reviewMain" extends="baseLayout">
+       <put-attribute name="title" value="Review 메인 페이지" />
+       <put-attribute name="body" value="/WEB-INF/views/customer/reviewMain.jsp" />
+    </definition>
+    
+    <definition name="/customer/reviewDetail" extends="baseLayout">
+       <put-attribute name="title" value="Review 상세 페이지" />
+       <put-attribute name="body" value="/WEB-INF/views/customer/reviewDetail.jsp" />
+    </definition>
+    
+    <definition name="/customer/reviewWrite" extends="baseLayout">
+       <put-attribute name="title" value="Review 입력 페이지" />
+       <put-attribute name="body" value="/WEB-INF/views/customer/reviewWrite.jsp" />
+    </definition>
+</tiles-definitions>
+
+

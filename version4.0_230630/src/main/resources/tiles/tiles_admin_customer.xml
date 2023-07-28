@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+    
+    <!-- 공지사항 -->
+    <definition name="/admin/customer/adminNoticeMain" extends="baseLayout">
+       <put-attribute name="title" value="공지사항 관리 페이지" />
+       <put-attribute name="body" value="/WEB-INF/views/admin/customer/adminNoticeMain.jsp" />
+    </definition>
+    
+    <definition name="/admin/customer/adminNoticeDetail" extends="baseLayout">
+       <put-attribute name="title" value="공지사항 상세 페이지" />
+       <put-attribute name="body" value="/WEB-INF/views/admin/customer/adminNoticeDetail.jsp" />
+    </definition>    
+    
+    <definition name="/admin/customer/adminNoticeWrite" extends="baseLayout">
+       <put-attribute name="title" value="공지사항 입력 페이지" />
+       <put-attribute name="body" value="/WEB-INF/views/admin/customer/adminNoticeWrite.jsp" />
+    </definition>
+   
+   
+    <!-- FAQ -->
+    <definition name="/admin/customer/adminFaqMain" extends="baseLayout">
+       <put-attribute name="title" value="FAQ 관리 페이지" />
+       <put-attribute name="body" value="/WEB-INF/views/admin/customer/adminFaqMain.jsp" />
+    </definition>
+    
+    <definition name="/admin/customer/adminFaqDetail" extends="baseLayout">
+       <put-attribute name="title" value="FAQ 상세 페이지" />
+       <put-attribute name="body" value="/WEB-INF/views/admin/customer/adminFaqDetail.jsp" />
+    </definition>    
+    
+    <definition name="/admin/customer/adminFaqWrite" extends="baseLayout">
+       <put-attribute name="title" value="FAQ 입력 페이지" />
+       <put-attribute name="body" value="/WEB-INF/views/admin/customer/adminFaqWrite.jsp" />
+    </definition>
+   
+    
+</tiles-definitions>
+
+

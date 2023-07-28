@@ -1,0 +1,269 @@
+@charset "UTF-8";
+
+/* ------------------------------- Login Page ------------------------------- */
+
+.loginContainer {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+#Container #contents {
+	width: 100%;
+	position: relative;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+#contents #titleArea {
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+#contents .loginWrap {
+	width: 335px;
+	margin: 0 auto;
+}
+
+.loginWrap .formBox .form dl {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.loginWrap .formBox .form dt {
+	font-size: 13px;
+	color: #222;
+}
+
+.loginWrap .formBox .form dd {
+	width: 245px;
+}
+
+.loginWrap .formBox .form dd input {
+	width: 100%;
+}
+
+.loginWrap input[type=text], .loginWrap input[type=password] {
+	background: #fff;
+	border-bottom: 1px solid #d8d8d8;
+	min-height: 33px;
+	line-height: 33px;
+	border: 0;
+	padding: 0 10px;
+}
+
+.loginWrap .formBox .form .loginBtn,
+.loginWrap .formBox .form .passwordBtn {
+	text-align: center;	
+}
+
+.loginWrap .loginBtn .submitBtn {
+	background: #1a1a1a;
+	color: #fff;
+	width: 100%;
+	padding: 16px 0;
+	text-align: center;
+	border-radius: 5px;
+	margin-top: 25px;
+	font-weight: 500;
+	font-size: 16px;
+	border: none;
+}
+
+.loginWrap .loginUtil {
+	margin: 30px 0 50px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.loginWrap .loginUtil a {
+	font-size: 13px;
+	color: #6b6b6b;
+	line-height: 13px;
+}
+
+.loginWrap .loginUtil a + a {
+	margin-left: 15px;
+}
+
+.loginWrap .snsLogin {
+	display: flex;
+	justify-content: space-between;
+}
+
+.loginWrap .snsLogin a {
+	width: 160px;
+	padding: 10px;
+	border-radius: 3px;
+	border: 1px solid #e6e6ea;
+	color: #222;
+	text-align: center;
+	font-size: 14px;
+}
+.loginWrap .snsLogin .btnNaver:after {
+	content: '';
+	width: 13px;
+	height: 13px;
+	background: url(${contentPath}/resources/image/icon_naverBtn.png') no-repeat center/13px;
+}
+
+/* ------------------------------- MemberForm Page ------------------------------- */
+
+table {
+	width: 100%;
+	border: 0;
+	border-collapse : collapse;
+	border-spacing: 0;
+}
+
+caption {
+	display: none;
+}
+
+.pageTitle2 {
+	margin: 50px 0 50px 0;
+	text-align: center;
+}
+
+.memberformContainer {
+	width: 100%;
+	height: 100%;
+}
+
+#contents .member-join {
+	width: 335px;
+	margin: 0 auto;
+}
+
+.member-join table {
+	table-layout: fixed;
+}
+
+.joinWrap table {
+	position: relative;
+	margin: 0;
+	border-top: 0;
+	color: #1a1a1a;
+}
+
+.member-join .joinWrap table tbody th {
+	width: 80px;
+	padding: 10px 0;
+	color: #222;
+	border: 0;
+	text-align: left;
+	font-weight: normal;
+	font-size: 13px;
+	vertical-align: text-center;
+}
+
+.member-join input[type=text],
+.member-join input[type=password] {
+	background: #fff;
+	border: none;
+	border-bottom: 1px solid #d8d8d8;
+	min-height: 30px;
+	line-height: 30px;
+	margin: 0;
+	width: 100%;
+	font-size: 13px;
+}
+.member-join .joinWrap table tbody td {
+	padding: 10px 0;
+}
+.member-join .joinWrap table tbody td div {
+	display: flex;
+}
+.member-join .joinWrap #btnOverlapped {
+	background: #fff;
+	font-size: 10px;
+	border: 1px solid #d8d8d8;
+	cursor: pointer;
+}
+.member-join .joinWrap #btnOverlapped:hover {
+	color: #fff;
+	background-color: #477a7b;
+	transition: 0.3s;
+}
+.member-join .msg {
+	font-size: 10px;
+	color: #b4b4b4;
+	margin-top: 5px;
+}
+
+.member-join .memberGender td label {
+	margin-right: 15px;
+	color: #222;
+	font-size: 13px;
+	min-height: 0;
+}
+
+.member-join .joinWrap .memberPhone td {
+	display: flex;
+}
+.member-join .joinWrap .memberPhone span {
+	display: block;
+	margin: 0 5px 0 5px;
+}
+
+.member-join .birthDay td{
+	display: flex;
+	align-items: center;
+	font-size: 13px;
+	color: #222;
+}
+
+.member-join .memberPhone td {
+	font-size: 10px;
+	color: #b4b4b4;
+}
+
+.member-join .email td {
+	display: flex;
+	align-items: center;
+	font-size: 10px;
+	color: #b4b4b4;
+}
+
+.member-join .email .emailGap  {
+	font-size: 16px;
+	color: #222;
+}
+
+.member-join .address td {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 12px;
+}
+
+.member-join .address td a {
+	display: block;
+	text-align: center;
+	font-size: 10px;
+	color: #222;
+	border: 1px solid #d8d8d8;
+	padding: 10px;
+}
+
+.member-join .address td a:hover {
+	color: #fff;
+	background-color: #477a7b;
+	transition: 0.3s;
+}
+.member-join .address td #zipcode {
+	width: 150px;
+}
+
+.member-join .address td p {
+	color: #222;
+	font-size: 10px;
+	width: 100%;
+}
+
+.member-join .address td p input[type=text] {
+	margin-bottom: 10px;
+}
+
+

@@ -1,0 +1,132 @@
+#page-nav-wrap{
+    width: 100%;
+    border-bottom: 1px solid #6d6d6d;
+}
+#page-nav{
+    margin: 0 auto;
+    width: 1080px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    color: #6d6d6d;  
+}
+.customerwrap {
+    width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.titlediv {
+    margin-top: 40px;
+}
+.customer-title {
+    font-size: 24px;
+    color: #292929;
+    font-weight: bold;
+}
+.customerservice{
+    font-size: 18px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    width: 310px;
+    height: 40px;
+   
+}
+.customerservice:nth-child(2){
+	 border-bottom-right-radius:20px;
+	 border-top-right-radius:20px;
+}
+#left-button{
+    border:0;
+    height:40px; line-height:40px;
+    border-top-left-radius:20px;
+    border-bottom-left-radius:20px;
+    background-color: #ebebeb;
+    cursor: pointer;
+}
+#right-button{
+    height:40px; line-height:40px;
+    margin-left: -6px;
+    border:0;
+    border-top-right-radius:20x;
+    border-bottom-right-radius:20px;
+    background-color: #fee469;
+    cursor: pointer;
+    overflow:hidden;
+    font-weight:bold;
+}
+.customer-table {
+    width: 1080px;
+    border-spacing: 0px;
+    border-collapse: separate;
+    font-size: 16px;
+    color: #505050;
+    margin-bottom: 30px;
+}
+.table-head {
+    height: 35px;
+    background-color: #ebebeb;
+    font-size: 18px;
+    color: #292929;
+}
+.table-td1 {
+    width: 240px;
+}
+.table-td2 {
+    width: 600px;
+}
+.table-td3 {
+    width: 240px;
+}
+.table-td1, .table-td2, .table-td3 {
+    text-align: center;
+}
+.table-tr {
+    height: 35px;
+}
+.td1, .td3 {
+    text-align: center;
+}
+.td1, .td2, .td3 {
+    border-bottom: 1px solid #ebebeb;
+}
+.customer-search {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+.searchbar {
+    width: 200px;
+    height: 30px;
+    font-size: 16px;
+    color: #292929;
+}
+.searchbutton {
+    width: 60px;
+    height: 30px;
+    background-color: #292929;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    margin-left: 5px;
+    margin-bottom: 50px;
+    margin-right: 278px;
+    cursor: pointer;
+}
+.onetoone {
+    width: 120px;
+    height: 30px;
+    margin-top: 3px;
+    border: 1px solid #292929;
+    border-radius: 5px;
+    background-color: white;
+    color: #292929;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.onetoone:hover {
+	background-color: #fee469;
+	border: none;
+}

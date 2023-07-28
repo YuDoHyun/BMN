@@ -1,0 +1,54 @@
+
+div#pagenav {
+	margin: 0 auto;
+}
+
+div.container-fluid {
+	width:1080px; margin:0 auto;
+}
+
+ul.pagination {
+	list-style: none;
+}
+
+ul.pagination li {
+	float:left; 
+	margin-right:5px;
+	width:34px;
+	height:34px;
+	line-height:34px;	
+ 	text-align:center;
+ 	background: #fff;
+}
+
+ul.pagination li a{
+	color:#505050; 
+	display:block;
+	font-size: 12px;
+}
+
+li.pageNaveClick {
+	background-color:#505050;
+	border-radius:17px;					
+}
+	
+li.pageNaveClick a {
+	color: #222 !important;
+	font-size: 12px;			
+}	
+	
+ul.pagination li:first-child{		
+	width:20px;
+	background-color:none;
+	margin:0;
+}
+
+ul.pagination li:nth-child(6){
+	margin-right:0px;
+}
+
+ul.pagination li:last-child{
+	margin:0px;
+	width:20px;
+	background-color:none;
+}

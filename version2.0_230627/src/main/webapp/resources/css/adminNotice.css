@@ -1,0 +1,113 @@
+.boardwrap {
+    width:800px;
+    margin-left: 20px;
+    margin-top: 170px;
+    float:left;
+}
+.board-title {
+    font-size: 24px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #292929;
+}
+.board-sub {
+    color: #292929;
+}
+.board-buttondiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.board-buttondiv {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.board-btn {
+    width: 100px;
+    height: 35px;
+    background-color: white;
+    color: #292929;
+    border: 1px solid #292929;
+    border-radius: 5px;
+    transition: 0.2s;
+    font-size: 14px;
+    cursor: pointer;
+}
+.board-btn:hover {
+    background-color: #fee469;
+    border: none;
+}
+.searchdiv {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+}
+.searchbar {
+    box-sizing: border-box;
+    width: 150px;
+    height: 30px;
+    font-size: 16px;
+    color: #292929;
+    margin-right: 5px;
+}
+.searchbutton {
+    width: 60px;
+    height: 30px;
+    background-color: #505050;
+    color: white;
+    font-size: 14px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.noticeAdmin-table {
+    width: 800px;
+    border-spacing: 0px;
+    border-collapse: separate;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #292929;
+}
+.noticeAdmin-title {
+    background-color: #ebebeb;
+    height: 35px;
+    font-weight: bold;
+}
+.noticeAdmin-td1, .noticeAdmin-td2, .noticeAdmin-td3, .noticeAdmin-td4, .noticeAdmin-td5 {
+    height: 35px;
+    border-bottom: 1px solid #ebebeb;
+}
+.noticeAdmin-td1 {
+    width: 35px;
+    border-right: 1px solid #ebebeb;
+}
+.noticeAdmin-td2 {
+    width: 130px;
+}
+.noticeAdmin-td3 {
+    width: 430px;
+    border-left: 1px solid #ebebeb;
+    border-right: 1px solid #ebebeb;
+}
+.noticeAdmin-td4 {
+    width: 65px;
+}
+.noticeAdmin-td5 {
+    border-left: 1px solid #ebebeb;
+}
+.notice-view {
+    color: #292929;
+    text-decoration: none;
+}
+.notice-modify {
+    color: #292929;
+    text-decoration: underline;
+    text-underline-position: under;
+}
+.row{
+    	margin-top:20px;
+    	margin-left:265px;
+}
